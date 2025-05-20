@@ -30,7 +30,6 @@ export const sendQuizzData = async (dataSend: ISendData): Promise<ISendData|null
   try {
      //let request = await axiosPublic.post(`/quizz`, dataSend)
     // return request.data
-    console.log("Enviando datos", dataSend)
     return dataSend
   } catch (error) {
     ErrorHandle(error)

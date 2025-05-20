@@ -92,12 +92,10 @@ const QuizzProvider = ({ children }: QuizzProviderProps) => {
     })
    
     const navega = ({ href, params }: IDestino) => {
-        console.log(href);
         router.replace(href, params);
     };
 
     const handleClick = (datos: IQuizzAnswer) => {
-        console.log(datos)
         dispatch({
             type: datos.type === "radio" ? "setAnswerRadio" : "setAnswerCheckbox",
             payload: datos
