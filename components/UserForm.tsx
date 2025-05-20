@@ -9,11 +9,10 @@ import Title from './ui/Title';
 
 function UserForm({handleSend}:{handleSend: (user: { nombre: string; email: string }) => void}) {
   const [user, setUser] = useState({
-    nombre: 'asdasd',
-    email: 'asds@faasda.com',
+    nombre: '',
+    email: '',
   });
 
-  // Handler to update user state based on campo and txt
   const handleInputChange = (campo: string, txt: string) => {
     setUser(prev => ({
       ...prev,
