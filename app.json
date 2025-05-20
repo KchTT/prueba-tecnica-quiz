@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "prueba-tecnica-quiz",
-    "slug": "prueba-tecnica-quiz",
+    "name": "Quizz",
+    "slug": "prueba-tecnica-quizz",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
