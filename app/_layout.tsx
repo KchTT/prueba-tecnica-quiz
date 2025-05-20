@@ -1,6 +1,7 @@
+import { COLOR_BLANCO } from '@/constants/Colors';
 import QuizzProvider from '@/context/QuizzContext';
 import { useColorScheme } from '@/hooks/useColorScheme';
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
+import { DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { useFonts } from 'expo-font';
 import { Stack } from 'expo-router';
@@ -27,8 +28,8 @@ export default function RootLayout() {
   return (
     <QueryClientProvider client={queryClient}>
       <QuizzProvider>
-        <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-          <Stack screenOptions={{ contentStyle: { backgroundColor: 'transparent'} }}>
+        <ThemeProvider value={colorScheme === 'dark' ? /*DarkTheme*/ DefaultTheme : DefaultTheme}>
+          <Stack screenOptions={{ contentStyle: { backgroundColor: COLOR_BLANCO} }}>
             <Stack.Screen name="index" options={{ headerShown: false }} />
             <Stack.Screen name="quizz" options={{ headerShown: false }} />
             <Stack.Screen name="+not-found" />
